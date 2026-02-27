@@ -28,6 +28,7 @@ function App() {
     fetchGames();
     const interval = setInterval(fetchGames, 30000); // poll every 30s
     return () => clearInterval(interval); // cleanup on unmount
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
