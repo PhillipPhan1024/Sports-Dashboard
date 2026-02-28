@@ -1,0 +1,9 @@
+# Ignore frontend (not needed on server)
+frontend/
+
+# Ignore git files
+.git/
+
+# Ignore local dev files
+.env
+docker-compose.yml

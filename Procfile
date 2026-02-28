@@ -1,1 +1,1 @@
-web: java -jar target/sports-dashboard-0.0.1-SNAPSHOT.jar
+web: java -jar sports-dashboard-0.0.1-SNAPSHOT.jar
