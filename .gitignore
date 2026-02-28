@@ -5,6 +5,7 @@ target/
 !**/src/test/**/target/
 .env
 *.jar
+.elasticbeanstalk/
 
 ### STS ###
 .apt_generated

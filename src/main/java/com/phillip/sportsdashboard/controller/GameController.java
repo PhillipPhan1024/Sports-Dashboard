@@ -21,4 +21,9 @@ public class GameController {
     public List<Game> getGames(@RequestParam String date) {
         return nbaService.getGamesByDate(date);
     }
+
+    @GetMapping("/health")
+    public String health() {
+        return "OK";
+    }
 }
