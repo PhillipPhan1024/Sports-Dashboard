@@ -11,9 +11,7 @@ function App() {
   const today = new Date().toLocaleDateString("en-CA");
   const fetchGames = async () => {
     try {
-      const response = await axios.get(
-        `${process.env.REACT_APP_API_URL}/api/games?date=${today}`,
-      );
+      const response = await axios.get(`/api/games?date=${today}`);
       setGames(response.data);
       setError(null);
     } catch (err) {

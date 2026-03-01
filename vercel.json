@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "http://sports-dashboard-env.eba-khf2m65n.us-west-2.elasticbeanstalk.com/api/:path*"
+    }
+  ]
+}
