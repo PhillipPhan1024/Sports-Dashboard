@@ -12,7 +12,10 @@ function App() {
   const fetchGames = async () => {
     try {
       const response = await axios.get(`/api/games?date=${today}`);
-      setGames(response.data);
+      const data = Array.isArray(response.data)
+        ? response.data
+        : response.data.data || [];
+      setGames(data);
       setError(null);
     } catch (err) {
       setError("Failed to fetch games. Is the backend running?");
