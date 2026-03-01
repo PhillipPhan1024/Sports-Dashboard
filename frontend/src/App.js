@@ -8,12 +8,11 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const today = new Date().toISOString().split("T")[0]; // "2026-02-27"
-
+  const today = new Date().toLocaleDateString("en-CA");
   const fetchGames = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/games?date=${today}`,
+        `${process.env.REACT_APP_API_URL}/api/games?date=${today}`,
       );
       setGames(response.data);
       setError(null);
